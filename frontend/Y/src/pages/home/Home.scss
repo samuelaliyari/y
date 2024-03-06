@@ -1,0 +1,30 @@
+.home {
+	padding: 3vmax;
+	padding-bottom: 0;
+	perspective: 900px;
+	transition: all 400ms ease;
+	.addButton {
+		position: fixed;
+		right: 2.5%;
+		bottom: 1%;
+		width: 4vmax;
+		cursor: pointer;
+		transition: all 500ms ease;
+		&:hover {
+			transform: scale(1.1) rotate(90deg);
+		}
+		&:active {
+			transform: rotate(180deg);
+		}
+	}
+	.card.is-flipped {
+		transform: rotateX(-180deg);
+
+		.commentList {
+			position: relative;
+		}
+		.fiddleFront {
+			max-height: 20vh;
+		}
+	}
+}

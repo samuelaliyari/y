@@ -1,0 +1,34 @@
+.commentList {
+	width: 100%;
+	position: absolute;
+
+	.commentInput {
+		position: sticky;
+		bottom: -0.5%;
+		width: 100%;
+		margin: 0 auto;
+		input {
+			width: 100%;
+			font-size: 1.5vmax;
+			padding: 2%;
+			padding-inline: 10%;
+			border-radius: 2.5vmax;
+		}
+		.backButton {
+			position: absolute;
+			top: 14%;
+			left: 2%;
+			img {
+				width: 3vmax;
+			}
+		}
+		.sendButton {
+			position: absolute;
+			bottom: 14%;
+			right: 2%;
+			img {
+				width: 3vmax;
+			}
+		}
+	}
+}

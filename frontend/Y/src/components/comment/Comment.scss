@@ -1,0 +1,29 @@
+.commentBox {
+	padding: 1% 2.5%;
+	border-bottom: 1px solid rgba(0, 0, 54, 0.456);
+	.comment {
+		display: flex;
+		align-items: center;
+		div {
+			display: flex;
+			align-items: center;
+			width: fit-content;
+			flex: 1;
+			img {
+				width: 30%;
+				aspect-ratio: 1 /1;
+				border-radius: 50%;
+				object-fit: cover;
+				border: 1px solid rgb(1, 1, 105);
+				margin-right: 0.5vmax;
+			}
+		}
+		h5 {
+			font-size: 1vmax;
+		}
+		p {
+			font-size: 1vmax;
+			flex: 3;
+		}
+	}
+}

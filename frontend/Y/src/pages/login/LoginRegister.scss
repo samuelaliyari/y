@@ -1,0 +1,91 @@
+.loginRegister {
+	height: 100vmin;
+	width: 38vmax;
+	padding: 10% 5% 5% 5%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	perspective: 900px;
+	color: rgb(2, 2, 131);
+
+	.card {
+		width: 100%;
+		height: 90%;
+		position: relative;
+		transition: transform 1s ease;
+		transform-origin: right;
+		transform-style: preserve-3d;
+		input {
+			display: block;
+			font-size: 1.7vmax;
+			margin: 1vmax auto;
+			padding: 2% 2.5%;
+			border: 2px solid rgb(1, 1, 105);
+			border-radius: 0.5vmax;
+			background: transparent;
+			&::placeholder {
+				color: rgba(2, 2, 131, 0.684);
+			}
+			&:focus {
+				outline: 1px solid rgb(1, 1, 105);
+			}
+		}
+		button {
+			display: block;
+			font-size: 1.7vmax;
+			margin: 3vmax auto;
+			margin-bottom: 6vmax;
+			width: 50%;
+			color: rgb(2, 2, 131);
+			border-radius: 0.5vmax;
+			padding: 2% 2.5%;
+			background: transparent;
+			border: 2px solid rgb(1, 1, 105);
+		}
+		a {
+			display: block;
+			text-align: center;
+			color: rgb(98, 98, 98);
+			text-decoration: underline;
+			margin: 0 auto;
+			font-size: 1.3vmax;
+		}
+		.login {
+			box-shadow: 0 0 7px 3px rgb(1, 1, 105);
+			padding: 12vh 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(9, 0, 57, 0);
+			backdrop-filter: blur(16px) brightness(105%);
+			border-radius: 2vmax;
+			border: 1px solid rgb(1, 1, 105);
+		}
+		.register {
+			box-shadow: 0 0 5px 3px rgb(1, 1, 105);
+			padding: 5vh 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(9, 0, 57, 0);
+			backdrop-filter: blur(16px) brightness(105%);
+			border-radius: 2vmax;
+			border: 1px solid rgb(1, 1, 105);
+			transform: rotateY(180deg);
+			input {
+				display: inline-block;
+				font-size: 1vmax;
+				margin-left: 1.2vmax;
+			}
+			button {
+				margin-block: 3vmax;
+			}
+		}
+		.cardface {
+			position: absolute;
+			backface-visibility: hidden;
+		}
+	}
+	.card.is-flipped {
+		transform: translateX(-100%) rotateY(-180deg);
+	}
+}

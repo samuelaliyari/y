@@ -1,0 +1,36 @@
+.verifyEmail {
+	padding: 10%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	.wrapper {
+		width: 50%;
+		height: 80%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		background-color: rgba(151, 204, 250, 0.111);
+		backdrop-filter: blur(12px);
+		border-radius: 1vmax;
+
+		input,
+		button {
+			width: 70%;
+			text-align: center;
+			display: block;
+			font-size: 1.7vmax;
+			margin: 1vmax auto;
+			padding: 2% 2.5%;
+			border: 2px solid rgb(1, 1, 105);
+			border-radius: 0.5vmax;
+			background: transparent;
+			&::placeholder {
+				color: rgba(2, 2, 131, 0.684);
+			}
+			&:focus {
+				outline: 1px solid rgb(1, 1, 105);
+			}
+		}
+	}
+}
