@@ -10,6 +10,7 @@ import cookieSession from "cookie-session";
 
 const app = express();
 
+app.use(morgan("dev"));
 
 app.use(express.json());
 
@@ -23,6 +24,7 @@ const storage = multer.diskStorage({
 })
 
 const upload = multer({ storage: storage });
+
 app.use(upload.single("image"));
 
 const FRONTENT_HOST_LINK = process.env.FRONTENT_HOST_LINK;
@@ -41,7 +43,7 @@ app.use(cookieSession({
 
 
 
-app.use(morgan("dev"));
+
 
 
 app.use("/api/v1/users", router.usersRouter)
@@ -81,7 +83,9 @@ const connectDB = async () => {
     }
 }
 
-
+app.use((req, res) => {
+    console.log(req.headers)
+})
 
 connectDB().then(runServer).catch(err => console.log(err));
 

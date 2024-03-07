@@ -18,7 +18,9 @@ const Home = ({ setAndGet }) => {
 	}, [setAndGet.authorization]);
 
 	return (
-		<main className='home'>
+		<main
+			className='home '
+			id='home'>
 			<FiddleList
 				setAndGet={setAndGet}
 				fiddles={setAndGet.fiddles}
@@ -27,12 +29,13 @@ const Home = ({ setAndGet }) => {
 				activeProfile={setAndGet.activeProfile}
 				setAndGet={setAndGet}
 			/>
-			<img
-				className='addButton'
-				src={add}
-				alt=''
-				onClick={showAddModal}
-			/>
+			<div className='addButton'>
+				<img
+					src={add}
+					alt=''
+					onClick={showAddModal}
+				/>
+			</div>
 		</main>
 	);
 };

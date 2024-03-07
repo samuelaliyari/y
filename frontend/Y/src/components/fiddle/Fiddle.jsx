@@ -95,17 +95,18 @@ const Fiddle = ({ setAndGet, fiddle }) => {
 			className='fiddle card'
 			id={thisFiddle._id}>
 			<article className='fiddleFront cardface'>
-				<div
-					className='userInfo'
-					onClick={() => navigate(`/profile/${profile._id}`)}>
+				<div className='userInfo'>
 					<img
 						src={
 							import.meta.env.VITE_MEDIA_URL +
 							`/${profile?.profileImg}`
 						}
 						alt=''
+						onClick={() => navigate(`/profile/${profile._id}`)}
 					/>
-					<h3>{profile?.userName}</h3>
+					<h3 onClick={() => navigate(`/profile/${profile._id}`)}>
+						{profile?.userName}
+					</h3>
 				</div>
 				<div className='content'>
 					<p>{thisFiddle.content}</p>

@@ -4,8 +4,12 @@
 
 
 const setLoggedInUser = async (authorization, setActiveProfile) => {
-    const profileId = await extractProfileId(authorization);
-    setActiveProfile(profileId)
+    try {
+        const profileId = await extractProfileId(authorization);
+        setActiveProfile(profileId)
+    } catch (error) {
+
+    }
 }
 
 

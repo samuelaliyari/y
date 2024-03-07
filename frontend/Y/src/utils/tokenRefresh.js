@@ -20,7 +20,7 @@ const calcTimeout = (accessToken) => {
 
 
 const getNewToken = async (setAuthorization) => {
-    const tokenFetch = await fetch("http://194.164.62.74:3000/api/v1/users/renew", {
+    const tokenFetch = await fetch("http://localhost:3000/api/v1/users/renew", {
         credentials: "include"
     })
     const { success, error, newAccessToken } = await tokenFetch.json();

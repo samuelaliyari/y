@@ -25,10 +25,12 @@
 				object-fit: cover;
 				border-radius: 50%;
 				border: 1px solid rgb(1, 1, 105);
+				cursor: pointer;
 			}
 			h3 {
 				color: rgb(1, 1, 105);
 				font-size: 1.3vmax;
+				cursor: pointer;
 			}
 		}
 
@@ -74,7 +76,7 @@
 			div {
 				display: flex;
 				align-items: first baseline;
-				gap: 5%;
+				gap: 1%;
 			}
 		}
 	}

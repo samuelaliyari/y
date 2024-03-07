@@ -14,8 +14,8 @@ const EditProfile = ({ setAndGet }) => {
 		event.preventDefault();
 		const fd = new FormData();
 		fd.append('userName', profile.userName);
-		fd.append('bio', profile.bio);
 		fd.append('_id', profile._id);
+		profile.bio ? fd.append('bio', profile.bio) : null;
 		profileImg ? fd.append('image', profileImg, profileImg.name) : null;
 		const editFetch = await fetch(
 			import.meta.env.VITE_SERVER_URL + '/profiles/editprofile',
@@ -43,7 +43,7 @@ const EditProfile = ({ setAndGet }) => {
 
 	const setSrc = () => {
 		if (profileImg) return URL.createObjectURL(profileImg);
-		else return import.meta.env.VITE_MEDIA_URL`/${profile?.profileImg}`;
+		else return import.meta.env.VITE_MEDIA_URL + `/${profile?.profileImg}`;
 	};
 
 	return (

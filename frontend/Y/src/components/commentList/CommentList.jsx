@@ -15,7 +15,6 @@ const CommentList = ({ comments, setAndGet, fiddleId, flipCard }) => {
 		);
 	};
 
-	console.log(sortBeiCratedAt(comments));
 	const sendComment = async () => {
 		const commentFetch = await fetch(
 			import.meta.env.VITE_SERVER_URL + '/fiddles/comment',
