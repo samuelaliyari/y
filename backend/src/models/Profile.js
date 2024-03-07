@@ -11,7 +11,7 @@ const profileSchema = new mongoose.Schema({
     privacy: { type: Boolean, default: false },
     savedFiddles: [{ type: mongoose.Types.ObjectId }],
     groups: [{ type: mongoose.Types.ObjectId }],
-    bio: { type: String },
+    bio: { type: String, default: "" },
     // fiddles: [{ type: mongoose.Types.ObjectId }],
 }, { collection: "profiles", timestamps: true })
 

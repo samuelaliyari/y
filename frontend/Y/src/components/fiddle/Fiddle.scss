@@ -1,8 +1,9 @@
 .fiddle {
 	position: relative;
 	transition: transform 1s ease;
-	transform-origin: right;
+
 	transform-style: preserve-3d;
+
 	.fiddleFront {
 		width: 60vmax;
 		margin: 0 auto;
